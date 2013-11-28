@@ -1,6 +1,6 @@
 from django.conf.urls.defaults import *
 from django.views.generic import DetailView
-from product_catalog.models import CWDProduct, Category
+from cwd_product_catalog.models import CWDProduct, Category
 from views import CategoryListView, CWDProductListView, CWDCategoryListView
 
 urlpatterns = patterns('',
