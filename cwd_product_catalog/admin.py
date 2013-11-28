@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.conf import settings as django_settings
 from cms.admin.placeholderadmin import PlaceholderAdmin
-from product_catalog.models import CWDProduct, Category
+from cwd_product_catalog.models import CWDProduct, Category
 
 class CWDProductAdmin(PlaceholderAdmin):
     prepopulated_fields = {"slug": ("name",)}

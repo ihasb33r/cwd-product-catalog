@@ -2,7 +2,7 @@ from menus.base import NavigationNode
 from menus.menu_pool import menu_pool
 from django.utils.translation import ugettext_lazy as _
 from cms.menu_bases import CMSAttachMenu
-from product_catalog.models import Category
+from cwd_product_catalog.models import Category
 
 class MyShopProductCategoryMenu(CMSAttachMenu):
 
