@@ -1,0 +1,22 @@
+{% load thumbnail %}
+{% load placeholder_tags %}
+
+<article class="category-list">
+    <h2> Category List </h2>
+    {% for category in object_list %}
+    <section class="category">
+        <h3>
+            <a href="{% url 'cwd_category_view' category.slug %}">
+                {{ category }}
+            </a>
+        </h3>
+        <div class="image">
+            <img src="{% thumbnail category.image 450x450%}"/>
+        </div>
+        <div class="category-description">
+            {% render_placeholder category.description %}
+        </div>
+    </section>
+
+    {% endfor %}
+</article>

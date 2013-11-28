@@ -1,0 +1,25 @@
+{% load placeholder_tags %}
+{% load thumbnail %}
+<article class="product-detail">
+    <h2>{{object.name}}</h2>
+    <div class="image">
+        <img src="{% thumbnail object.image 500x600%}">
+
+        {% if object.extra %}
+        {% include "product_catalog_extra_info/extra_info.html" with info=object.extra %}
+        {% endif %}
+
+    </div>
+    <div class="info">
+        <div class="categories">
+            {% for category in object.category.all %}
+            <a href="{% url 'cwd_category_view' category.slug%}" >
+                {{category }}
+            </a>
+            {% endfor %}
+        </div>
+        <div class="description">
+            {% render_placeholder object.description %}
+        </div>
+    </div>
+</article>

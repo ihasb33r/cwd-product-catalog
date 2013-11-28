@@ -1,0 +1,6 @@
+
+*.db
+*.pyc
+*.sqlite3
+settings.py
+dist
