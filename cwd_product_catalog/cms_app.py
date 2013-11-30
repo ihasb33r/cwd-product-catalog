@@ -5,7 +5,7 @@ from menu import MyShopProductCategoryMenu
 
 class ProductCatalogAppHook(CMSApp):
     name = _("Product Catalog App Hook")
-    urls = ["product_catalog.urls"]
+    urls = ["cwd_product_catalog.urls"]
     menus = [MyShopProductCategoryMenu]
 
 apphook_pool.register(ProductCatalogAppHook)
